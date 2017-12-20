@@ -16,6 +16,13 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.use('/blog-posts', blogPostRouter);
+
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
+});
+
+
 
 // Use npm to initialize your project
 // // Install uuid, which is a Node package that the blog post 
